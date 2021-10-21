@@ -32,7 +32,7 @@ project's repository.
     git add <modifiedFile>
     git commit
     ```
-5. Keeping branch in sync with upstream. Please squash your multiple commits.
+5. Keeping branch in sync with upstream.
     ```
     git checkout branchName
     git fetch upstream
@@ -51,5 +51,5 @@ project's repository.
 Once you have opened a Pull Request (PR), reviewers will be assigned to your
 PR and they may provide review comments which you need to address.
 Commit changes made in response to review comments to the same branch on your
-fork. Once a PR is ready to merge, squash any *fix review feedback, typo*
+fork. Once a PR is ready to merge, `Squash and Merge` any *fix review feedback, typo*
 and *merged* sorts of commits.
