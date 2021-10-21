@@ -17,7 +17,7 @@ project's repository.
     ```
     Add a remote upstream to track upstream PawsHelper repository.
     ```
-    git remote add upstream https://github.com/icecube/PawsHelper.git
+    git remote add upstream https://github.com/ChujieChen/PawsHelper.git
     ```
     Never push to upstream main
     ```
@@ -32,7 +32,7 @@ project's repository.
     git add <modifiedFile>
     git commit
     ```
-5. Keeping branch in sync with upstream.
+5. Keeping branch in sync with upstream. Please squash your multiple commits.
     ```
     git checkout branchName
     git fetch upstream
@@ -43,7 +43,7 @@ project's repository.
     git push -f origin branchName:remoteBranchName
     ```
 7. Create a Pull request on GitHub.
-   Visit your fork at `https://github.com/ChujieChen/PawsHelper` and click
+   Visit your fork at `https://github.com/$user/PawsHelper` and click
    `Compare & Pull Request` button next to your `remoteBranchName` branch.
 
 ### Getting reviewers
