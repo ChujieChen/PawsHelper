@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import React from "react";
+import AnimalTypeCountsSection from "./sections/AnimalTypeCountsSection";
+import AnimalOutcomeSection from "./sections/AnimalOutcomeSection";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Title">
+        <h1>Team 11 - PawsHelper</h1>
+        <h3>
+          Chen Wang, Chujie Chen, Tongshu Yang, Xinyu Chen, Xueting Feng, Zhe
+          Zhang
+        </h3>
+      </div>
+      <AnimalTypeCountsSection />
+      <AnimalOutcomeSection />
     </div>
   );
 }
-
-export default App;
