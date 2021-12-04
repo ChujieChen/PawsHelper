@@ -1,0 +1,45 @@
+const hasNameData = [
+  {
+    has_name: "False",
+    Adoption: 10619,
+    AdoptionColor: "hsl(228, 70%, 50%)",
+    Died: 816,
+    DiedColor: "hsl(231, 70%, 50%)",
+    Disposal: 553,
+    DisposalColor: "hsl(69, 70%, 50%)",
+    Euthanasia: 6978,
+    EuthanasiaColor: "hsl(173, 70%, 50%)",
+    Missing: 18,
+    MissingColor: "hsl(265, 70%, 50%)",
+    Relocate: 21,
+    RelocateColor: "hsl(63, 70%, 50%)",
+    "Return to Owner": 857,
+    "Return to OwnerColor": "hsl(228, 70%, 50%)",
+    "Rto-Adopt": 15,
+    "Rto-AdoptColor": "hsl(69, 70%, 50%)",
+    Transfer: 19950,
+    TransferColor: "hsl(231, 70%, 50%)"
+  },
+  {
+    has_name: "True",
+    Adoption: 48759,
+    AdoptionColor: "hsl(228, 70%, 50%)",
+    Died: 381,
+    DiedColor: "hsl(231, 70%, 50%)",
+    Disposal: 44,
+    DisposalColor: "hsl(69, 70%, 50%)",
+    Euthanasia: 1738,
+    EuthanasiaColor: "hsl(173, 70%, 50%)",
+    Missing: 51,
+    MissingColor: "hsl(265, 70%, 50%)",
+    Relocate: 2,
+    RelocateColor: "hsl(63, 70%, 50%)",
+    "Return to Owner": 21304,
+    "Return to OwnerColor": "hsl(228, 70%, 50%)",
+    "Rto-Adopt": 780,
+    "Rto-AdoptColor": "hsl(69, 70%, 50%)",
+    Transfer: 18104,
+    TransferColor: "hsl(231, 70%, 50%)"
+  }
+];
+export default hasNameData;
