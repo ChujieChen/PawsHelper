@@ -1,0 +1,106 @@
+<div class="login">
+  <h1>Predict Adoption Rate</h1>
+  <h3>Enter the following Values to Predict</h3>
+  <p>sex_changed, has_name, pure_color, male_or_not, female_or_not, multi-intake are fields that only take in boolean value where the 1 represnt True and 0 represnt False.</p>
+
+  <form action="{{url_for('predict')}}" method="POST">
+
+    <label for="intake_type">Intake Type: <input list="intake_type" name="intake_type" required="required" /></label>
+    <div id="intake_type_container"></div>
+    <br>
+    <label for="intake_condition">Intake Condition: <input list="intake_condition" name="intake_condition" required="required" /></label>
+    <div id="intake_condition_container"></div>
+    <br>
+    <label for="animal_type">Animal Type: <input list="animal_type" name="animal_type" required="required" /></label>
+    <div id="animal_type_container"></div>
+    <br>
+    <label for="sex_changed">Sex of animal has changed or not:</label>
+    <input type="number" name="sex_changed" required="required" min="0" max="1"/>
+    <label for="sex_changed">0 indicates 'no change', 1 indicates 'changed'</label>
+    <br><br>
+    <label for="breed">Breed of animal:</label>
+    <input type="text" name="breed" placeholder="breed" required="required" />
+    <br><br>
+    <label for="has_name">Does animal has name or not:</label>
+    <input type="number" name="has_name" required="required" min="0" max="1"/>
+    <label for="has_name">0 indicates 'no name', 1 indicates 'has name'</label>
+    <br><br>
+    <label for="age">Age of animal(number of days):</label>
+    <input type="number" name="age" placeholder="age" required="required" />
+    <br><br>
+    <label for="pure_color">Does animal has only one color or not:</label>
+    <input type="number" name="pure_color" required="required" min="0" max="1"/>
+    <label for="pure_color">0 indicates 'mixed multiple color', 1 indicates 'Single color'</label>
+    <br><br>
+    <label for="male_or_not">Is animal a male or not:</label>
+    <input type="number" name="male_or_not" required="required" min="0" max="1"/>
+    <label for="male_or_not">0 indicates 'not male', 1 indicates 'is male'</label>
+    <br><br>
+    <label for="female_or_not">Is animal a female or not:</label>
+    <input type="number" name="female_or_not" required="required" min="0" max="1"/>
+    <label for="female_or_not">0 indicates 'not female', 1 indicates 'female'</label>
+    <br><br>
+    <label for="multi_intake">Does animal come to shelter more than one time or not:</label>
+    <input type="number" name="multi_intake" required="required" min="0" max="1"/>
+    <label for="multi_intake">0 indicates 'first time come to shelter', 1 indicates 'more than one time'</label>
+    <br><br>
+    <button type="submit" class="btn">Predict</button>
+  </form>
+  <br />
+  {{breed_check}}
+  <br />
+  {{prediction_text}}
+  <br />
+  {{prediction_prob1}}
+  <br />
+  {{prediction_prob2}}
+</div>
+
+<script>
+var intake_type_values = ['Abandoned','Euthanasia Request','Owner Surrender','Public Assist','Stray','Wildlife'];
+
+var intake_type = document.createElement("datalist");
+intake_type.name = "intake_type";
+intake_type.id = "intake_type"
+
+for (const val of intake_type_values)
+{
+    var option = document.createElement("option");
+    option.value = val;
+    option.text = val.charAt(0).toUpperCase() + val.slice(1);
+    intake_type.appendChild(option);
+}
+document.getElementById("intake_type_container").appendChild(intake_type);
+
+// Intake Condition
+var intake_condition_values = ['Aged','Behavior','Feral','Injured','Med Attn','Med Urgent','Medical','Neonatal','Normal','Nursing','Other','Panleuk','Pregnant','Sick','Space'];
+
+var intake_condition = document.createElement("datalist");
+intake_condition.name = "intake_condition";
+intake_condition.id = "intake_condition"
+
+for (const val of intake_condition_values)
+{
+    var option = document.createElement("option");
+    option.value = val;
+    option.text = val.charAt(0).toUpperCase() + val.slice(1);
+    intake_condition.appendChild(option);
+}
+document.getElementById("intake_condition_container").appendChild(intake_condition);
+
+// Animal Type
+var animal_type_values = ['Bird','Cat','Dog','Livestock','Other'];
+
+var animal_type = document.createElement("datalist");
+animal_type.name = "animal_type";
+animal_type.id = "animal_type"
+
+for (const val of animal_type_values)
+{
+    var option = document.createElement("option");
+    option.value = val;
+    option.text = val.charAt(0).toUpperCase() + val.slice(1);
+    animal_type.appendChild(option);
+}
+document.getElementById("animal_type_container").appendChild(animal_type);
+</script>
