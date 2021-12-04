@@ -1,6 +1,6 @@
 # PawsHelper
 
-### Author (all member contribute equally)
+### Authors (all members contribute equally)
 Chen Wang, Chujie Chen, Tongshu Yang, Xinyu Zhang, Xueting Feng, Zhe Zhang
 
 ## DESCRIPTION
